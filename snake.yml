@@ -2,14 +2,14 @@ name: generate contribution snake
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # her gün gece çalışsın
-  workflow_dispatch:       # Actions sekmesinden elle tetiklemek için
+    - cron: "0 0 * * *"    # Her gün gece 00:00'da çalışır
+  workflow_dispatch:        # El ile başlatmak için
   push:
     branches:
-      - main               # repo'nun default branch'i "master" ise burayı master yap
+      - main               # Default branch ismin main değilse değiştir
 
 permissions:
-  contents: write          # output branch'ine push için gerekli
+  contents: write          
 
 jobs:
   build:
@@ -23,10 +23,10 @@ jobs:
       - name: Generate snake SVG
         uses: Platane/snk/svg-only@v3
         with:
-          github_user_name: mozybali
+          github_user_name: 0xREISUB  # Burayı senin adınla güncelledim
           outputs: |
-            dist/github-contribution-snake.svg
-            dist/github-contribution-snake-dark.svg?palette=github-dark
+            dist/snake.svg
+            dist/snake-dark.svg?palette=github-dark
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
