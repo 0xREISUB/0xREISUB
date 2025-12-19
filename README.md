@@ -45,7 +45,10 @@ I am a software developer primarily focusing on backend systems, web, mobile, an
 
 ### GitHub Activity
 
-![GitHub Snake](https://raw.githubusercontent.com/0xREISUB/0xREISUB/output/snake.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/0xREISUB/0xREISUB/output/snake-dark.svg">
+  <img alt="GitHub Snake" src="https://raw.githubusercontent.com/0xREISUB/0xREISUB/output/snake.svg">
+</picture>
 
 ---
 
